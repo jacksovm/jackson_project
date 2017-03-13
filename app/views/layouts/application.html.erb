@@ -5,17 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-    <h1 style="text-align:center">Sew Purple Creations</h1>
+  
         <ul>
             <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/home">Home</a></li>
             <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/blog">Blog</a></li>
             <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/shop">Shop</a></li>
             <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/cart">Cart</a></li>
         </ul>
-<%= yield %>
-<c><img src="pictures/banner.jpg" alt="image of the shop logo"></c>
+          <h1>Sew Purple Creations</h1>
+<p><%= yield %></p>
+<%= link_to image_tag("SewPurple logo.jpg", alt:"image of the shop logo"), 'https://jackson-project-jacksovm.c9users.io/static_pages/home', class:"small" %>
 </body>
 </html>
