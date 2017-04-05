@@ -7,15 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="header">
   
         <ul>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/home">Home</a></li>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/blog">Blog</a></li>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/shop">Shop</a></li>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/static_pages/cart">Cart</a></li>
+            <li><a href="https://jackson-project-jacksovm.c9users.io">Home</a></li>
+            <li><a href="https://jackson-project-jacksovm.c9users.io/blog">Blog</a></li>
+            <li><a href="https://jackson-project-jacksovm.c9users.io/shop">Shop</a></li>
+            <li><a href="https://jackson-project-jacksovm.c9users.io/cart">Cart</a></li>
+            <li><a href="https://jackson-project-jacksovm.c9users.io/login">Account</a></li>
         </ul>
           <h1>Sew Purple Creations</h1>
-<p><%= yield %></p>
+          <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+    </div>
+<%= yield %>
+<%= debug(params) if Rails.env.development? %>
 <%= link_to image_tag("SewPurple logo.jpg", alt:"image of the shop logo"), 'https://jackson-project-jacksovm.c9users.io/static_pages/home', class:"small" %>
 </body>
 </html>
