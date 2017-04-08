@@ -10,11 +10,17 @@
   <div class="header">
   
         <ul>
-            <li><a href="https://jackson-project-jacksovm.c9users.io">Home</a></li>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/blog">Blog</a></li>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/shop">Shop</a></li>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/cart">Cart</a></li>
-            <li><a href="https://jackson-project-jacksovm.c9users.io/login">Account</a></li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Blog", blog_path %></li>
+            <li><%= link_to "Shop", shop_path %></li>
+            <li><%= link_to "Cart", root_path %></li>
+            <% if logged_in? %>
+              <li><%= link_to "Profile", user_path(current_user) %></li>
+              <li><%= link_to "Log out", logout_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Log in", login_path %></li>
+            <% end %>
+            
         </ul>
           <h1>Sew Purple Creations</h1>
           <% flash.each do |message_type, message| %>
@@ -22,6 +28,6 @@
       <% end %>
     </div>
 <%= yield %>
-<%= link_to image_tag("SewPurple logo.jpg", alt:"image of the shop logo"), 'https://jackson-project-jacksovm.c9users.io/static_pages/home', class:"small" %>
+<%= link_to image_tag("SewPurple logo.jpg", alt:"image of the shop logo"), root_path, class:"small" %>
 </body>
 </html>
