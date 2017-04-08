@@ -11,8 +11,7 @@ body {
     text-align: center;
     background-image: url("Grunge-textures-vintage-background-vectors-06-280x235.png")
 }
-
-
+///navigation bar
 ul {
     list-style-type: none;
     margin: auto;
@@ -37,7 +36,7 @@ li a:hover{
     font-weight:bold;
     color: white;
 }
-
+////
 h1{
     
     color:white;
@@ -85,24 +84,35 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
+.info {
+  text-align: left;
 }
 
-.gravatar_edit {
-  margin-top: 15px;
+.profile {
+
+  font-size: 25px;
 }
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
- // @include box_sizing;
 }
 
 input {
   height: auto !important;
 }
+
+.row {
+    background-color:white;
+    color:black;
+    margin: 30px;
+    padding: 10px;
+}
+.up {
+  font-size: 24px;
+}
+
+///errors
 #error_explanation {
   color: red;
   ul {
@@ -117,13 +127,5 @@ input {
     color: $state-danger-text;
   }
 }
-.row {
-    background-color:white;
-    color:black;
-    margin: 30px;
-    padding: 10px;
-}
-.up {
-  font-size: 24px;
-}
 
+////
