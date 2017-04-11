@@ -1,5 +1,31 @@
 <% provide(:title, "Home")%>
-       <p>Hello and welcome to my website where I sell crafts that I make.<br><br>
-       <%= image_tag("il_570xN.1169102556_mjmy.jpg", alt:"image of dragon", class:"homeDragon") %>
-       </p>
-        
+       <p>Hello and welcome to my website where I sell crafts that I make.</p>
+       
+<div class="slideshow-container">
+    <div class="numbertext">1 / 4</div>
+    <%= image_tag("il_570xN.1169102556_mjmy.jpg", alt:"image of dragon", class: "showpic") %>
+    <div class="text">Handmade Dragon Plush</div>
+    
+    <div class="numbertext">2 / 4</div>
+    <%= image_tag("gold.jpeg", alt:"gold wings", class: "showpic") %>
+    <div class="text">Gold shoe wings</div>
+    
+    <div class="numbertext">3 / 4</div>
+    <%= image_tag("silver.jpeg", alt:"silver shoe wings", class: "showpic") %>
+    <div class="text">Silver shoe wings</div>
+    
+    <div class="numbertext">4 / 4</div>
+    <%= image_tag("onshoe.jpg", alt:"on shoe wings",class: "showpic" ) %>
+    <div class="text">Opalesent Shoe wings</div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div><c>
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</c></div>
