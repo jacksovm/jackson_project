@@ -12,8 +12,15 @@
    <br><br><br>
 </p>
 
-<p class="profile">
-  <b>Feed</b>
+ 
 
-  
-</p>
+   <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <p class="profile">
+  <b>Feed</b>(<%= @user.microposts.count %>)
+</p>  
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>

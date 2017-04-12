@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/cart', to: 'static_pages#cart'
   
   resources :users
+  resources :microposts,          only: [:create, :destroy]
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

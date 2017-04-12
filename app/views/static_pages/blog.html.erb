@@ -1,2 +1,18 @@
-<% provide(:title, "Blog")%>
-<pFind me in app/views/static_pages/blog.html.erb></p>
+<% provide(:title, "post")%>
+<% if logged_in? %> 
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+  <div class="col-md-8">
+      <p class= "profile"><b>Feed</b></p>
+      <%= render 'shared/feed' %>
+    </div>
+<% else %>
+<% end %>
