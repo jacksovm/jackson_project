@@ -4,6 +4,9 @@
 </p>
 
 <p class="info">
+    <span class="out">
+    <%= link_to "Log out", logout_path, method: :delete %>
+    </span>
   <%= gravatar_for @user %>
   <br>
    <b>User name: </b><%= @user.name %>
@@ -13,8 +16,7 @@
 </p>
 
  
-
-   <div class="col-md-8">
+<div class="col-md-8">
     <% if @user.microposts.any? %>
       <p class="profile">
   <b>Feed</b>(<%= @user.microposts.count %>)

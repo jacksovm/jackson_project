@@ -175,7 +175,12 @@ input {
 }
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  float: right;
+}
+
+.prev{
+  left: 0;
+  float: left;
 }
 
 .prev:hover, .next:hover {
@@ -201,7 +206,6 @@ input {
 }
 
 .dot {
-  text-align: center;
   cursor:pointer;
   height: 13px;
   width: 13px;
@@ -231,9 +235,7 @@ input {
   from {opacity: .4} 
   to {opacity: 1}
 }
-.showpic{
-  width:300px;
-}*/
+*/
 
 /* microposts */
 
@@ -295,4 +297,34 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.itemImage img{
+  width: 50px;
+  float: left;
+}
+.x img{
+  float: right;
+  width: 10px;
+}
+.desc{
+  font-size: 14;
+}
+.desc_2{
+  font-size: 10px;
+  color: gray;
+}
+.price{
+  float: right;
+}
+.shopImage img{
+  width: 200px;
+  float:left;
+}
+.showimg img{
+  width: 300px;
+}
+
+.out {
+ float: right;
 }

@@ -1,2 +1,21 @@
 <% provide(:title, "Cart")%>
-<p>Find me in app/views/static_pages/cart.html.erb</p>
+
+<P class="profile"><b>Shopping Cart</b></P>
+ 
+ <p>
+     <%= link_to image_tag("dragon.jpg"), shop_path, class:"itemImage" %>
+     <span class= "desc">Dragon Plushie</span><br>
+     <span class="desc_2">Blue/Green</span>
+     <%= link_to image_tag("x.png"), cart_path, class: "x" %>
+     
+    <br>
+    <span class="price">$25</span>
+    <br>
+    
+    <%= link_to image_tag("divider.png"), shop_path, class: "divider" %>    
+    <br>
+    <span class="price"><b>Total:  </b> $25</span>
+    <br><br>
+   
+ </p>
+     
